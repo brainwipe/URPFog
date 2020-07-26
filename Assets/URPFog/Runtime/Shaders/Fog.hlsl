@@ -103,7 +103,9 @@ float3 RayMarchedFog(float3 original, float distance, float3 rayDir, float3 rayO
         float density = _Presence;
 #ifdef NOISE
         float3 noiseUV = frac(currentPosition  * 1.0/_NoiseScale + _Time.y * _NoiseSpeed);
-        density *= pow(_VolumetricNoiseTexture.Sample(sampler_VolumetricNoiseTexture, noiseUV).x,_NoiseExponent);        
+        density *= pow(
+            abs(_VolumetricNoiseTexture.Sample(sampler_VolumetricNoiseTexture, noiseUV).x),
+            _NoiseExponent);        
 #endif
 
         extColor += IntegralFog( 
