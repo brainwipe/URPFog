@@ -56,3 +56,4 @@ Material:
     - _NoiseSpeed: {r: 0.05, g: 0, b: 0.05, a: 1}
     - _Scattering: {r: 0, g: 0.5, b: 0.5, a: 1}
     - _ScatteringTint: {r: 0.5, g: 0.6, b: 0.7, a: 1}
+  m_BuildTextureStacks: []
